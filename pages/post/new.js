@@ -53,6 +53,7 @@ export default function NewPost(props) {
               <textarea
                 className="resize-none border border-slate-500 w-full block my-2 px-4 py-2 rounded-sm"
                 value={topic}
+                maxLength={80}
                 onChange={(e) => setTopic(e.target.value)}
               />
             </div>
@@ -64,12 +65,18 @@ export default function NewPost(props) {
                 className="resize-none border border-slate-500 w-full block my-2 px-4 py-2 rounded-sm"
                 value={keywords}
                 onChange={(e) => setKeywords(e.target.value)}
+                maxLength={80}
               />
               <small className="block mb-2">
                 Searate keywords with a comma
               </small>
             </div>
-            <button className="btn">Generate</button>
+            <button
+              disabled={!topic.trim() || !keywords.trim()}
+              className="btn"
+            >
+              Generate
+            </button>
           </form>
         </div>
       )}
@@ -84,6 +91,16 @@ NewPost.getLayout = function getLayout(page, pageProps) {
 export const getServerSideProps = withPageAuthRequired({
   async getServerSideProps(ctx) {
     const props = await getAppProps(ctx);
+
+    if (!props.availableTokens) {
+      return {
+        redirect: {
+          destination: "/token-topup",
+          permanent: false,
+        },
+      };
+    }
+
     return {
       props,
     };
