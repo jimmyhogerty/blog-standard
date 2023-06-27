@@ -1,6 +1,17 @@
+# BlogGPT
+
+Live Demo - https://sea-lion-app-s4uak.ondigitalocean.app/
+
+BlogGPT is a complete blog generation platform utilizing OpenAI's 3.5 Turbo model.
+
+To generate articles, you must create an account and purchase tokens.
+
+<img width="1422" alt="Screenshot 2023-06-26 at 7 52 28 PM" src="https://github.com/jimmyhogerty/blog-standard/assets/43115008/3c6df92c-2995-41c3-b6ea-a95a8b6b82b3">
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Run Locally
 
 First, run the development server:
 
@@ -12,23 +23,24 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Local ENV Requirements
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+In order to run this project locally, you must provide the following environmental variables located in a `.env.local` file placed in the root directory.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Auth0 API
+- AUTH0_SECRET=
+- AUTH0_BASE_URL=
+- AUTH0_ISSUER_BASE_URL=
+- AUTH0_CLIENT_ID=
+- AUTH0_CLIENT_SECRET=
 
-## Learn More
+OpenAI API
+- OPENAI_API_KEY=
 
-To learn more about Next.js, take a look at the following resources:
+MongoDB API
+- MONGODB_URI=
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Stripe API
+- STRIPE_SECRET_KEY=
+- STRIPE_PRODUCT_PRICE_ID=
+- STRIPE_WEBHOOK_SECRET=
