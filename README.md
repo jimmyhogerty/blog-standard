@@ -9,7 +9,14 @@ Username: test@test.com
 Password: Test123!!
 ```
 
-Live Demo - https://sea-lion-app-s4uak.ondigitalocean.app/
+### Live Demo - https://sea-lion-app-s4uak.ondigitalocean.app/
+
+### Screenshots
+
+<img width="900" alt="Screenshot 2023-07-06 at 8 35 26 AM" src="https://github.com/jimmyhogerty/blog-standard/assets/43115008/81e5100d-e080-45ce-b570-79d58d9fac48">
+<img width="900" alt="Screenshot 2023-07-06 at 8 36 12 AM" src="https://github.com/jimmyhogerty/blog-standard/assets/43115008/6684a4ee-ea29-47a3-a5af-e1f61a281496">
+
+
 
 
 ### Run Locally
