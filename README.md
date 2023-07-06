@@ -1,5 +1,7 @@
 # BlogGPT
 
+## If you are interested in using this without paying, please email me at Jdhogerty@gmail.com and I will supply you with credentials to an account with access.
+
 Live Demo - https://sea-lion-app-s4uak.ondigitalocean.app/
 
 BlogGPT is a complete blog generation platform utilizing OpenAI's 3.5 Turbo model.
